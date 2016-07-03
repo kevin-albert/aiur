@@ -1,11 +1,10 @@
 {
-  "name": "typo-typer",
+  "name": "typo-server",
   "version": "0.0.1",
   "description": "#",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/kevin-albert/typo/issues"
   },
-  "homepage": "https://github.com/kevin-albert/typo#readme"
+  "homepage": "https://github.com/kevin-albert/typo"
 }

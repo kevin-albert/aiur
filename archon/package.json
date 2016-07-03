@@ -1,10 +1,10 @@
 {
-  "name": "typo-server",
+  "name": "typo-archon",
   "version": "0.0.1",
   "description": "#",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kevin-albert/typo/issues"
   },
-  "homepage": "https://github.com/kevin-albert/typo#readme"
+  "homepage": "https://github.com/kevin-albert/typo",
+  "dependencies": {
+    "node-uuid": "^1.4.7"
+  }
 }
