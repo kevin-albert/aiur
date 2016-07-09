@@ -4,6 +4,7 @@
   "description": "#",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start.local": "node .",
+    "start.prod": "node . >/var/log/assimilator.log 2>/var/log/assimilator.log"
   }
 }
