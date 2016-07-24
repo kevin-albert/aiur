@@ -1,6 +1,6 @@
 'use strict'
 
-const ASSIMILATOR_HOST = 'localhost'
+const ASSIMILATOR_HOST = '52.38.225.69'
 const ASSIMILATOR_PORT = 9026
 const CHECKIN_INTERVAL = 10000
 const INPUT_TIMEOUT = 60000
