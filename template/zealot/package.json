@@ -1,0 +1,13 @@
+{
+  "name": "zealot",
+  "version": "0.0.1",
+  "description": "#",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "getmac": "^1.2.1",
+    "node-uuid": "^1.4.7"
+  }
+}

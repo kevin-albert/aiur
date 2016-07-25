@@ -36,8 +36,7 @@ function sendMessage(id, msg) {
 function doSend(unit, msg, retries, callback) {
   unit.socket.send(msg, error => {
     if (error) {
-      logger.error(`sending message to ${unit.id
-      }: ${JSON.stringify(error)}`)
+      logger.error(`failed to send to ${unit.id}: ${JSON.stringify(error)}`)
       if (retries) {
         // retry
         doSend(unit, msg, retries-1, callback)

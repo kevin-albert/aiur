@@ -1,1 +1,66 @@
-var _0x6fa1=["\x75\x73\x65\x20\x73\x74\x72\x69\x63\x74","\x7A\x6C\x69\x62","\x20\x20\x20","\x3B\x20\x20","\x20\x20\x0A","\x3B\x20\x0A","\x20\x20\x09","\x3B\x20\x09","\x20\x0A\x20","\x3B\x0A\x20","\x20\x0A\x0A","\x3B\x0A\x0A","\x20\x0A\x09","\x3B\x0A\x09","\x20\x09\x20","\x3B\x09\x20","\x20\x09\x0A","\x3B\x09\x0A","\x76","\x6B","\x66\x6F\x72\x45\x61\x63\x68","\x6D\x61\x70","\x6B\x65\x79\x73","\x75\x74\x66\x2D\x38","\x73\x74\x72\x69\x6E\x67\x69\x66\x79","\x66\x72\x6F\x6D","\x68\x65\x78","\x6C\x65\x6E\x67\x74\x68","\x61\x6C\x6C\x6F\x63","\x63\x68\x61\x72\x41\x74","\x77\x72\x69\x74\x65","\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x67\x7A\x69\x70","\x73\x75\x62\x73\x74\x72","\x70\x61\x72\x73\x65","\x67\x75\x6E\x7A\x69\x70","\x65\x78\x70\x6F\x72\x74\x73"];_0x6fa1[0];var zlib=require(_0x6fa1[1]);var h2j={"\x30":_0x6fa1[2],"\x31":_0x6fa1[3],"\x32":_0x6fa1[4],"\x33":_0x6fa1[5],"\x34":_0x6fa1[6],"\x35":_0x6fa1[7],"\x36":_0x6fa1[8],"\x37":_0x6fa1[9],"\x38":_0x6fa1[10],"\x39":_0x6fa1[11],"\x61":_0x6fa1[12],"\x62":_0x6fa1[13],"\x63":_0x6fa1[14],"\x64":_0x6fa1[15],"\x65":_0x6fa1[16],"\x66":_0x6fa1[17]};var S={"\x20":4,"\x09":2,"\x0A":11,"\x3B":3};var j2h={};Object[_0x6fa1[22]](h2j)[_0x6fa1[21]](function(_0xc8c5x6){return {k:_0xc8c5x6,v:h2j[_0xc8c5x6]}})[_0x6fa1[20]](function(_0xc8c5x5){return j2h[_0xc8c5x5[_0x6fa1[18]]]= _0xc8c5x5[_0x6fa1[19]]});function E(_0xc8c5x8,_0xc8c5x6){if(_0xc8c5x8 instanceof  Buffer){_0xc8c5x8= _0xc8c5x8.toString(_0x6fa1[23])};var _0xc8c5x9=JSON[_0x6fa1[24]](_0xc8c5x8);zlib[_0x6fa1[33]](Buffer[_0x6fa1[25]](_0xc8c5x9,_0x6fa1[23]),function(_0xc8c5xa,_0xc8c5xb){var _0xc8c5xc=_0xc8c5xb.toString(_0x6fa1[26]);var _0xc8c5xd=Buffer[_0x6fa1[28]](_0xc8c5xc[_0x6fa1[27]]* 3);for(var _0xc8c5xe=0;_0xc8c5xe< _0xc8c5xc[_0x6fa1[27]];++_0xc8c5xe){_0xc8c5xd[_0x6fa1[30]](h2j[_0xc8c5xc[_0x6fa1[29]](_0xc8c5xe)],_0xc8c5xe* 3)};var _0xc8c5xf=Object[_0x6fa1[22]](S)[_0xc8c5xd[_0x6fa1[27]]% 4];var _0xc8c5x10=_0xc8c5xf;for(var _0xc8c5xe=0;_0xc8c5xe< S[_0xc8c5xf];++_0xc8c5xe){_0xc8c5x10+= Object[_0x6fa1[22]](S)[Math[_0x6fa1[32]](Math[_0x6fa1[31]]()* 4)]};_0xc8c5x6(_0xc8c5x10+ _0xc8c5xd.toString())})}function D(_0xc8c5x8,_0xc8c5x6){if(_0xc8c5x8 instanceof  Buffer){_0xc8c5x8= _0xc8c5x8.toString(_0x6fa1[23])};var _0xc8c5xd=_0xc8c5x8[_0x6fa1[34]](S[_0xc8c5x8[_0x6fa1[29]](0)]+ 1);var _0xc8c5xc=Buffer[_0x6fa1[28]](_0xc8c5xd[_0x6fa1[27]]/ 3);for(var _0xc8c5xe=0;_0xc8c5xe< _0xc8c5xd[_0x6fa1[27]];_0xc8c5xe+= 3){_0xc8c5xc[_0x6fa1[30]](j2h[_0xc8c5xd[_0x6fa1[34]](_0xc8c5xe,3)],_0xc8c5xe/ 3)};zlib[_0x6fa1[36]](Buffer[_0x6fa1[25]](_0xc8c5xc.toString(),_0x6fa1[26]),function(_0xc8c5xa,_0xc8c5x12){_0xc8c5x6(JSON[_0x6fa1[35]](_0xc8c5x12.toString()))})}module[_0x6fa1[37]]= {e:E,d:D}
+const zlib = require('zlib')
+
+const h2j = {
+  '0': '   ',
+  '1': ';  ',
+  '2': '  \n',
+  '3': '; \n',
+  '4': '  \t',
+  '5': '; \t',
+  '6': ' \n ',
+  '7': ';\n ',
+  '8': ' \n\n',
+  '9': ';\n\n',
+  'a': ' \n\t',
+  'b': ';\n\t',
+  'c': ' \t ',
+  'd': ';\t ',
+  'e': ' \t\n',
+  'f': ';\t\n'
+}
+
+const S = {
+  ' ': 4,
+  '\t': 2,
+  '\n': 11,
+  ';': 3
+}
+
+var j2h = {}
+Object.keys(h2j)
+  .map(c => {return {k: c, v: h2j[c]}})
+  .forEach(o => j2h[o.v] = o.k)
+
+function E(data, c) {
+  var json = JSON.stringify(data)
+  zlib.gzip(Buffer.from(json, 'utf-8'), (_, gz) => {
+    var hex = gz.toString('hex')
+    var junk = Buffer.alloc(hex.length*3)
+    for (var i = 0; i < hex.length; ++i) {
+      junk.write(h2j[hex.charAt(i)], i * 3)
+    }
+    var prefix = Object.keys(S)[junk.length % 4]
+    var text = prefix
+    for (var i = 0; i < S[prefix]; ++i) {
+      text += Object.keys(S)[Math.floor(Math.random() * 4)]
+    }
+    c(text + junk.toString())
+  })
+}
+
+function D(data, c) {
+  if (data instanceof Buffer) data = data.toString('utf-8')
+  var junk = data.substr(S[data.charAt(0)]+1)
+  var hex = Buffer.alloc(junk.length/3)
+  for (var i = 0; i < junk.length; i += 3) {
+    hex.write(j2h[junk.substr(i, 3)], i/3)
+  }
+  zlib.gunzip(Buffer.from(hex.toString(), 'hex'), (_, result) => {
+    c(JSON.parse(result.toString()))
+  })
+}
+
+module.exports = {
+  e: E,
+  d: D
+}

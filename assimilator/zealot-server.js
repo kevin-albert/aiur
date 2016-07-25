@@ -73,6 +73,9 @@ function checkIn(msg, socket) {
     }
     zealots[msg.zealotID] = zealot
   }
+  if (msg.info) {
+    zealots[msg.zealotID].info = msg.info
+  }
   router.connect(msg.zealotID, socket)
 }
 
