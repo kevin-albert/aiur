@@ -1,24 +1,24 @@
 'use strict'
 
 const net = require('net')
-const obfuscator = require('./obfuscator')
+const obfuscator = require('../obfuscator')
 const router = require('./router')
 const logger = require('./logger')('protocol')
 
 function createServer(port, handler) {
   net.createServer(socket => {
-
+    const o = obfuscator.create()
     let callback = (message) => logger.debug('received message with no callback handler')
     function onMessage(callback) {
       socket.on('data', data => {
-        obfuscator.d(data, message => {
+        o.d(data, message => {
           callback(message)
         })
       }).on('error', error => logger.error(JSON.stringify(error)))
     }
 
     function send(message, callback) {
-      obfuscator.e(message, data => {
+      o.e(message, data => {
         socket.write(data, callback)
       })
     }

