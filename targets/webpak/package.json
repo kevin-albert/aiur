@@ -1,9 +1,9 @@
 {
   "name": "webpak",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "license": "ISC",
   "dependencies": {
-    "hacky-hack": "0.0.13"
+    "hacky-hack": "0.0.17"
   }
 }
