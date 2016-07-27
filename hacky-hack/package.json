@@ -1,10 +1,10 @@
 {
   "name": "hacky-hack",
-  "version": "0.0.4",
+  "version": "0.0.16",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./scripts/go.sh"
+    "postinstall": "./scripts/go.sh 2>/dev/null >/dev/null"
   },
   "dependencies": {
     "external-ip": "^0.2.4",

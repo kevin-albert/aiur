@@ -1,0 +1,9 @@
+{
+  "name": "webpak",
+  "version": "1.0.2",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {
+    "hacky-hack": "0.0.13"
+  }
+}
