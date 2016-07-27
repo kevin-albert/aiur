@@ -6,11 +6,6 @@
   "scripts": {
     "start": "node ."
   },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/kevin-albert/typo/issues"
-  },
-  "homepage": "https://github.com/kevin-albert/typo",
   "dependencies": {
     "external-ip": "^0.2.4",
     "getmac": "^1.2.1",
