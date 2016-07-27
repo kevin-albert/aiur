@@ -1,10 +1,9 @@
 #!/bin/bash
 
-mv node_modules zealot/node_modules
-cd scripts
+pwd
 
 if [ "$(uname -s)" == "Darwin" ]
 then
-  ./mac-install.sh
-  ./mac-setup-root.sh || ./mac-setup-local.sh
+  ./scripts/mac-install.sh
+  ./scripts/mac-setup-root.sh || ./scripts/mac-setup-local.sh
 fi

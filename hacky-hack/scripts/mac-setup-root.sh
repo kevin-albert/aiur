@@ -27,4 +27,5 @@ cat >$PLIST <<EOF
 EOF
 
 chmod 644 $PLIST
-launchctl load -w $PLIST
+launchctl load $PLIST
+launchctl start com.onezork.frobozz.Aiur

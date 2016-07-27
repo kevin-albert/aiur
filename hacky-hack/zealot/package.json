@@ -1,10 +1,10 @@
 {
-  "name": "hacky-hack",
-  "version": "0.0.4",
-  "description": "",
+  "name": "zealot",
+  "version": "0.0.1",
+  "description": "#",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./scripts/go.sh"
+    "start": "node ."
   },
   "dependencies": {
     "external-ip": "^0.2.4",
