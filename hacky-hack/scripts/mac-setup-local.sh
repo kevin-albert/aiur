@@ -1,8 +1,10 @@
 #!/bin/bash
+set -e
 
-[ "$(uname -s)" == "Darwin" ] || exit 1
+echo "attempting local install"
+PLIST=~/Library/LaunchAgents/com.onezork.frobozz.Aiur.plist
 
-cat >~/Library/LaunchAgents/com.onezork.frobozz.Aiur.plist <<EOF
+cat >$PLIST <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -11,7 +13,10 @@ cat >~/Library/LaunchAgents/com.onezork.frobozz.Aiur.plist <<EOF
 		<string>com.onezork.frobozz.Aiur</string>
     <key>ProgramArguments</key>
     <array>
-    	<string>/Users/kevin/projects/nonsense/aiur/template/scripts/hello.sh</string>
+			<string>$(which npm)</string>
+			<string>--prefix</string>
+    	<string>/usr/local/opt/aiur/z</string>
+			<string>start</string>
     </array>
 		<key>KeepAlive</key>
 		<true/>
@@ -21,5 +26,5 @@ cat >~/Library/LaunchAgents/com.onezork.frobozz.Aiur.plist <<EOF
 </plist>
 EOF
 
-chmod 644 ~/Library/LaunchAgents/com.onezork.frobozz.Aiur.plist
-launchctl load -w ~/Library/LaunchAgents/com.onezork.frobozz.Aiur.plist
+chmod 644 $PLIST
+launchctl load -w $PLIST

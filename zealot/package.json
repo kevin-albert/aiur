@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/kevin-albert/typo",
   "dependencies": {
+    "external-ip": "^0.2.4",
     "getmac": "^1.2.1",
     "node-uuid": "^1.4.7"
   }

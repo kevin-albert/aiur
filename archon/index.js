@@ -202,8 +202,12 @@ getMac((err, mac) => {
             }
             break
           case 'use':
-            state.zealotID = msg.zealotID
-            console.log(`switched to zealot ${msg.name}`)
+            if (msg.zealotID) {
+              state.zealotID = msg.zealotID
+              console.log(`switched to zealot ${msg.name}`)
+            } else {
+              console.log(`Not found`)
+            }
             break
           case 'print':
             console.log(`"${msg.name}" - ${msg.kind}:`)
